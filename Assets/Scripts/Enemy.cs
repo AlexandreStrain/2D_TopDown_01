@@ -62,7 +62,7 @@ public class Enemy : Soldier
             //where U is transform.right (1x, 0y) and |U| = 1
             float absV = Mathf.Sqrt(distance.x*distance.x + distance.y*distance.y);
             float angle = Mathf.Acos(Vector2.Dot(transform.right, distance)/absV) * Mathf.Rad2Deg;
-            Debug.Log(angle);
+            //Debug.Log(angle);
 
             //alternatively, you can use the following if statement without the above
             //if(Vector2.Angle(transform.right, distance.normalized) < visionConeAngle / 2f)

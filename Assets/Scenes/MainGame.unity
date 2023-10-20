@@ -1169,6 +1169,90 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 799575264}
   m_CullTransparentMesh: 1
+--- !u!1 &910635830
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 910635831}
+  - component: {fileID: 910635832}
+  m_Layer: 0
+  m_Name: Ground
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &910635831
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910635830}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &910635832
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910635830}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -1
+  m_Sprite: {fileID: 21300000, guid: 34bf0ae9e87b342a9bef0cc55a3b8be9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 2
+  m_Size: {x: 1000, y: 1000}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &1267276351
 GameObject:
   m_ObjectHideFlags: 0
@@ -1506,9 +1590,9 @@ MonoBehaviour:
   gameScreen: {fileID: 1926294987}
   levelNumber: 0
   levels:
-  - {fileID: 2800000, guid: 0f149aaf033a644e3822696696350602, type: 3}
-  - {fileID: 2800000, guid: 6c102c0e7d5094a3aae8b7a8a364ace7, type: 3}
   - {fileID: 2800000, guid: 7e877d75738654d84aed2cbd7eff43a8, type: 3}
+  - {fileID: 2800000, guid: 6c102c0e7d5094a3aae8b7a8a364ace7, type: 3}
+  - {fileID: 2800000, guid: 0f149aaf033a644e3822696696350602, type: 3}
   levelCamera: {fileID: 2115925101}
   playerColor: {r: 1, g: 1, b: 1, a: 1}
   playerPrefab: {fileID: 1468296996884749153, guid: 1f864119c147c4fa3a9f7a95467b3dd5, type: 3}
@@ -1523,6 +1607,9 @@ MonoBehaviour:
   blueWallPrefab: {fileID: 3286255902376633977, guid: 743f53fce7e6e4070ba5878c4cf4296b, type: 3}
   orangeWallColor: {r: 1, g: 0.5882353, b: 0, a: 1}
   orangeWallPrefab: {fileID: 854288688465315959, guid: 3824ae4741a15447bbaacedbf47fbb9e, type: 3}
+  cyanWallColor: {r: 0, g: 1, b: 1, a: 1}
+  cyanWallPrefab: {fileID: 3604324453479941615, guid: d3b9b35b1237fab45ab0f1ea77a033b0, type: 3}
+  obstacles: []
   weaponColor: {r: 0.39215687, g: 0, b: 0.39215687, a: 1}
   weaponPrefabs:
   - {fileID: 2063096515026551378, guid: 4e9c231e3596845a68c6d0898b859fe0, type: 3}
@@ -2307,3 +2394,4 @@ SceneRoots:
   - {fileID: 215902103}
   - {fileID: 199278571}
   - {fileID: 573118125}
+  - {fileID: 910635831}

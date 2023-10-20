@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Wall : MonoBehaviour
 {
-    private float left, top, width, height;
-    private SpriteRenderer spriteRenderer;
+    protected float left, top, width, height;
+    protected SpriteRenderer spriteRenderer;
 
     void Start()
     {

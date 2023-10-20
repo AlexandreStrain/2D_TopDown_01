@@ -21,6 +21,7 @@ public class Player : Soldier
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         hitbox = GetComponent<CircleCollider2D>();
+        canSwim = true;
 
         //Instantiate a weapon for the soldier to be equipped with at start of game
         Weapon weaponToEquip = Instantiate(startingWeapon).GetComponent<Weapon>();

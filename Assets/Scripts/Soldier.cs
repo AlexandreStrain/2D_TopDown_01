@@ -19,6 +19,7 @@ public abstract class Soldier : MonoBehaviour
     [Header("Animation")]
     public bool isDead;
     public bool isMoving;
+    public bool canSwim;
     public bool isHit; //the booleans here describe the various animation states we will handle
     public Animator animator; //a reference variable to the animator component on the gameobject
     public float hitTimer; //a timer for how long to toggle the soldier's image off and on when hit
@@ -205,12 +206,19 @@ public abstract class Soldier : MonoBehaviour
             //if soldier is touching a wall and it exists (the wall is not null)
             if (w != null && IsTouchingWall(w))
             {
-                transform.position -= velocity;
-                //push away from the nearestPoint the soldier is from the wall
-                PushFrom(w.PointNearestTo(transform.position), 0.15f);
-                isPushed = true;
-            }    
-            else 
+                if (w is Water && canSwim)
+                {
+                    isPushed = false;
+                }
+                else
+                {
+                    transform.position -= velocity;
+                    //push away from the nearestPoint the soldier is from the wall
+                    PushFrom(w.PointNearestTo(transform.position), 0.15f);
+                    isPushed = true;
+                }
+            }
+            else
             {
                 isPushed = false;
             }

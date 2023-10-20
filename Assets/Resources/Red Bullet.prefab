@@ -162,7 +162,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d3c5c38d889145268e5a371d6d7f542, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 4
+  speed: 6
   angle: 0
   velocity: {x: 0, y: 0, z: 0}
   lifetime: 2

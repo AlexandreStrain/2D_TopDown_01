@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using TMPro;
+using System;
+using Random = UnityEngine.Random;
 
 public class GameManager : MonoBehaviour
 {
@@ -40,6 +42,10 @@ public class GameManager : MonoBehaviour
     public GameObject blueWallPrefab;
     public Color orangeWallColor;
     public GameObject orangeWallPrefab;
+    public Color cyanWallColor;
+    public GameObject cyanWallPrefab;
+
+    public Obstacle[] obstacles;
 
     public Color weaponColor;
     public GameObject[] weaponPrefabs;
@@ -161,6 +167,11 @@ public class GameManager : MonoBehaviour
                         wallList.Add(Instantiate(orangeWallPrefab,
                                      new Vector3(x, y, 0f), Quaternion.identity));
                     }
+                    else if (pixel == cyanWallColor)
+                    {
+                        wallList.Add(Instantiate(cyanWallPrefab,
+                                     new Vector3(x, y, 0f), Quaternion.identity));
+                    }
                     else if (pixel == weaponColor)
                     {
                         Instantiate(
@@ -194,4 +205,10 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [Serializable]
+    public struct Obstacle
+    {
+        public Color mapColor;
+        public GameObject gameObjectPrefab;
+    }
 }

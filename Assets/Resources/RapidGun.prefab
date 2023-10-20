@@ -168,6 +168,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 0}
   bulletPrefab: {fileID: 2627488798467176230, guid: ef8788dde3fc91b448c9e2c1c2716183, type: 3}
   bulletStartPosition: {x: 0, y: 0, z: 0}
-  timeBetweenShots: 0.5
+  timeBetweenShots: 0.1
   shootTimer: 0
   damageMultiplier: 1

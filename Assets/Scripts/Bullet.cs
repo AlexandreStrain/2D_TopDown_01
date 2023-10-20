@@ -53,9 +53,8 @@ public class Bullet : MonoBehaviour
         {
             //get the wall script from the GameObject
             Wall w = GameManager.wallList[i].gameObject.GetComponent<Wall>();
-
             //if the bullet is touching the wall
-            if (IsTouchingWall(w))
+            if (!(w is Water) && IsTouchingWall(w))
             {
                 //stop the bullet from going through the wall by applying a negative velocity (cancels out previous)
                 transform.position -= velocity;
